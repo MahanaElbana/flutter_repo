@@ -27,7 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ),
       ),),
-      bottomNavigationBar:BottomNavigationBar(
+      bottomNavigationBar:BottomNavigationBar( 
+        
+          
         currentIndex: _currentIndex,
         onTap: ((value) => setState(() {
           _currentIndex = value ; 
@@ -46,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       // floatingActionButtonAnimator:FloatingActionButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
      ///
-     /*floatingActionButton: Container(
+      /*floatingActionButton: Container(
         height: 65.0,
         width: 65.0,
         child: FittedBox(
@@ -123,7 +125,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
         )
       )*/
-     
      ///
      ///
 

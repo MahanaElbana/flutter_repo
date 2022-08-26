@@ -134,3 +134,59 @@ https://pub.dev/packages/hive
 ```
 https://pub.dev/packages/get
 ```
+
+
+
+How to change theme(fromSwitch) in flutter ? 🚀
+
+```dart
+ //------------- color scheme ----------------//
+
+    // ---- method 1 --------//
+
+    // colorScheme: ColorScheme.fromSwatch().copyWith(
+    //   primary: ColorManager. kPrimaryColor, // appBar color
+    //   secondary:ColorManager. kSecondaryColor, // floatingActionButton
+    //   error: ColorManager. kErrorColor,
+    // ),
+
+    //------- method 2 --------//
+
+    // colorScheme: const ColorScheme.dark(
+    //     brightness: Brightness.light,
+    //     onPrimary: Colors.white,
+    //     primary:  ColorManager. kPrimaryColor, // appBar color
+    //     secondary:  ColorManager. kSecondaryColor,
+    // ),
+
+    //------- method 3 --------//
+
+   // colorScheme: const ColorScheme.light(
+   //     primary: ColorManager.kPrimaryColor,
+   //     secondary: ColorManager.kSecondaryColor),
+
+   //------- method 4 --------//
+
+   // colorScheme: const ColorScheme.dark().copyWith(
+   //    primary: ColorManager.kPrimaryColor,
+   //    secondary:  ColorManager.kSecondaryColor,
+   //    brightness: Brightness.light ,
+   //    onPrimary: Colors.white
+   //  ),
+
+    //------- method 5 --------//
+    // colorScheme:  ColorScheme.fromSeed(seedColor: Colors.red).copyWith(
+    //   primary: ColorManager.kPrimaryColor,
+    //   secondary: ColorManager.kSecondaryColor,
+    // ),
+
+    //------- method 6 --------//
+      colorScheme: const ColorScheme.highContrastDark().copyWith(
+      primary: ColorManager.kPrimaryColor,
+      secondary: ColorManager.kSecondaryColor,
+      onPrimary: Colors.white,
+      brightness: Brightness.light
+
+    ),
+    //---------------- color scheme ---------------//
+```
