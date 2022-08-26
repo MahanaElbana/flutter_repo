@@ -125,4 +125,12 @@ flutter build appbundle --release
      **/android/key.properties
      **/android/app/upload-keystore.jks
    ```
-
+## packages 
+ - hive 2.2.3
+```
+https://pub.dev/packages/hive
+```
+ - get 4.6.5
+```
+https://pub.dev/packages/get
+```
