@@ -1,6 +1,15 @@
 import 'package:chat_flutter_app/controller/theme_controller.dart';
+import 'package:chat_flutter_app/core/widegets.dart';
+import 'package:chat_flutter_app/view/screens/CuatomFadeTransation.dart';
+
+import 'package:chat_flutter_app/view/screens/animated_cross_fade.dart';
+import 'package:chat_flutter_app/view/screens/animated_opicity.dart';
+
+import 'package:chat_flutter_app/view/screens/challenge1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'animation/route_animated_transition.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,43 +20,106 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final ThemeController _themeController = Get.put(ThemeController());
-  int _currentIndex = 0 ; 
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Obx(() => Center(
+              child: Text(_themeController.themeMode.value == "dark"
+                  ? "dark"
+                  : "light"))),
+          CustomButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const Challeneg1();
+                }));
+              },
+              textString: "trial"),
+/////////////////////
+
+          CustomButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const CustomAnimatedCrossFade();
+                }));
+              },
+              textString: "cross fade animation "),
+
+///////////////////////////////
+          CustomButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const CustomAnimatedOpacity();
+                }));
+              },
+              textString: "AnimatedOpicity"),
+          ///////////////////////////////
+          CustomButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const CuatomFadeTransation();
+                }));
+              },
+              textString: "animatedSli"),
+          ///////////////////////////////
+          const SizedBox(
+            height: 15,
+          ),
+          CustomButton(
+              onPressed: () {
+                Navigator.of(context).push(MahneyPageRoute(
+                    page: const CustomAnimatedCrossFade(),transitionType: TransitionType.slideTransitionFromLeft
+                   ));
+              },
+              textString: "translation1"),
+
+          /////////////////////
+          ///
+
+          ///
+        ],
+      ),
       appBar: AppBar(title: const Text("Chat App")),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _themeController.onChanageThemeMode();
         },
-        child: Obx(()=>(
-             Icon(
-            _themeController.themeMode.value == "light"?  Icons.wb_sunny_outlined:Icons.dark_mode_outlined,
+        child: Obx(
+          () => (Icon(
+            _themeController.themeMode.value == "light"
+                ? Icons.wb_sunny_outlined
+                : Icons.dark_mode_outlined,
             color: Colors.white,
-          )
+          )),
         ),
-      ),),
-      bottomNavigationBar:BottomNavigationBar( 
-        
-          
+      ),
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: ((value) => setState(() {
-          _currentIndex = value ; 
-        })),
-        
+              _currentIndex = value;
+            })),
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-         // BottomNavigationBarItem(icon:Icon(Icons.numbers_outlined),label: "" ),
+          // BottomNavigationBarItem(icon:Icon(Icons.numbers_outlined),label: "" ),
           BottomNavigationBarItem(
               icon: Icon(Icons.add_a_photo_sharp), label: "Add"),
           BottomNavigationBarItem(icon: Icon(Icons.camera), label: "Camera")
         ],
       ),
       // floatingActionButtonAnimator:FloatingActionButton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
-     ///
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
+
+      ///
       /*floatingActionButton: Container(
         height: 65.0,
         width: 65.0,
@@ -125,9 +197,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
         )
       )*/
-     ///
-     ///
-
+      ///
+      ///
     );
   }
 }

@@ -190,3 +190,12 @@ How to change theme(fromSwitch) in flutter ? 🚀
     ),
     //---------------- color scheme ---------------//
 ```
+## Running different build commands to get different native binaries of the same app 
+``` s
+$ flutter build appbundle
+$ flutter build ios
+$ flutter build web
+$ flutter build macos
+$ flutter build windows
+$ flutter build linux
+```

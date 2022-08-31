@@ -1,5 +1,5 @@
 import 'package:chat_flutter_app/controller/theme_controller.dart';
-import 'package:chat_flutter_app/core/chat_colors.dart';
+
 import 'package:chat_flutter_app/view/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,12 +27,14 @@ class _ChatAppState extends State<ChatApp> {
       GetMaterialApp(
           // theme: getApplicationTheme(),
           debugShowCheckedModeBanner: false,
+
           theme: lightThemeData(),
-          darkTheme: darkThemeData(),
+          darkTheme  : darkThemeData(),
+
           themeMode: _themeController.themeMode.value == "light"
               ? ThemeMode.light
               : ThemeMode.dark,
-          home:  HomeScreen()),
+          home: const HomeScreen()),
     );
   }
 }

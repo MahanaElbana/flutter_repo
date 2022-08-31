@@ -49,4 +49,3 @@ ThemeData darkThemeData() {
 
 const appBarTheme = AppBarTheme(centerTitle: true, elevation: 0.0);
 
-
