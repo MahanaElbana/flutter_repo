@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 // package customization of MaterialPageRoute
 // created by mahney Elbana
 // Flutter package
-/// Example
-/// ///////////////////////////////////////
+
+/// ///////------------- Example  ---------------////////////
 ///  TextButton(onPressed:() {
 ///      Navigator.of(context).push(MahneyPageRoute(
 ///          page: const CustomAnimatedCrossFade(),

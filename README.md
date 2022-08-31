@@ -71,6 +71,10 @@ fluuter_project
            main 
              AndroidManifest.xml
 ```
+## How to run appliction "flutter project on linux desktop" 🚀
+```
+flutter run -d linux
+```
 # the best commands  🚀
 
 ```

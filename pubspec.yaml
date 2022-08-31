@@ -17,6 +17,8 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.0.3
   flutter_native_splash: ^2.2.8
+  grouped_list: ^5.1.2
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
