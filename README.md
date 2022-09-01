@@ -203,3 +203,17 @@ $ flutter build macos
 $ flutter build windows
 $ flutter build linux
 ```
+
+
+## How to use Hive in flutter project 🚀
+ - Add the following to your **pubspec.yaml**:
+```
+dependencies:
+  hive: ^[version]
+  hive_flutter: ^[version]
+
+dev_dependencies:
+  hive_generator: ^[version]
+  build_runner: ^[version]
+```
+ Initialize

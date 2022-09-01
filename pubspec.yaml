@@ -19,11 +19,19 @@ dependencies:
   flutter_native_splash: ^2.2.8
   grouped_list: ^5.1.2
   intl: ^0.17.0
-
+  firebase_core: ^1.21.1   ## import 'package:firebase_core/firebase_core.dart';
+  firebase_auth: ^3.7.0    ## import 'package:firebase_auth/firebase_auth.dart';
+  cloud_firestore: ^3.4.6  ## import 'package:cloud_firestore/cloud_firestore.dart';
+  
+  hive: 
+  hive_flutter: 
+  path_provider: ^2.0.11
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  hive_generator: 
+  build_runner: 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

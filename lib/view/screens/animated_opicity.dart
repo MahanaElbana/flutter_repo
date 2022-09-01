@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/cli_commands.dart';
+
 
 class CustomAnimatedOpacity extends StatefulWidget {
   const CustomAnimatedOpacity({Key? key}) : super(key: key);

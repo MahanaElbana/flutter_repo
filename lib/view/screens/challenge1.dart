@@ -44,7 +44,7 @@ class _Challeneg1State extends State<Challeneg1> {
               ////////////////
               SliverPersistentHeader(
                 delegate: MyHeaderTitle((visable) {
-                  print(visable);
+                 // print(visable);
                 }, "Last : Transaction"),
               ),
               ///////////////////////////////////////////
@@ -60,7 +60,7 @@ class _Challeneg1State extends State<Challeneg1> {
               /// ////////////////
               SliverPersistentHeader(
                 delegate: MyHeaderTitle((visable) {
-                  print(visable);
+                 // print(visable);
                 }, "Last : Transaction"),
               ),
               ///////////////////////////////////////////

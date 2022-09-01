@@ -7,11 +7,11 @@ import 'package:chat_flutter_app/view/screens/animated_opicity.dart';
 
 import 'package:chat_flutter_app/view/screens/challenge1.dart';
 import 'package:chat_flutter_app/view/screens/chat_screen.dart';
+import 'package:chat_flutter_app/view/screens/hiveScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../animation/route_animated_transition.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -77,13 +77,20 @@ class _HomeScreenState extends State<HomeScreen> {
           CustomButton(
               onPressed: () {
                 Navigator.of(context).push(MahneyPageRoute(
-                    page:  ChatScreenDialog(),transitionType: TransitionType.slideTransitionFromLeft
-                   ));
+                    page:const  ChatScreenDialog(),
+                    transitionType: TransitionType.slideTransitionFromLeft));
               },
               textString: "chat app ui "),
 
           /////////////////////
-          ///
+
+          CustomButton(
+              onPressed: () {
+                Navigator.of(context).push(MahneyPageRoute(
+                    page: const HiveScreen(),
+                    transitionType: TransitionType.slideTransitionFromLeft));
+              },
+              textString: "Hive screen learning "),
 
           ///
         ],
